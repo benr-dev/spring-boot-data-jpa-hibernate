@@ -2,6 +2,8 @@ package com.example.entity;
 
 import javax.persistence.*;
 
+// Simple enitity using auto-generated primary key
+
 @Entity
 @Table(name = "dvds")
 public class Dvd {
@@ -16,8 +18,7 @@ public class Dvd {
 
     public Dvd() {} // for JPA
 
-    public Dvd(long id, String title, int runningTimeInSeconds) {
-        this.id = id;
+    public Dvd(String title, int runningTimeInSeconds) {
         this.title = title;
         this.runningTimeInSeconds = runningTimeInSeconds;
     }
